@@ -1,9 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: "Ha-Phan Tran personal website",
+    title: "Ha-Phan Tran",
     author: "Ha-Phan Tran",
   },
   plugins: [
+    "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-source-contentful",
       options: {
