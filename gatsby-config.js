@@ -1,9 +1,18 @@
 module.exports = {
   siteMetadata: {
-    title: "Ha-Phan Tran",
-    author: "Ha-Phan Tran",
+    title: "Ha Phan Tran's Website",
+    author: "Ha Phan Tran",
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        useMozJpeg: false,
+        stripMetadata: true,
+        defaultQuality: 75,
+      },
+    },
+    `gatsby-transformer-sharp`,
     "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-source-contentful",
