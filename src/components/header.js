@@ -18,7 +18,7 @@ import {
 } from "@material-ui/core"
 import MenuIcon from "@material-ui/icons/Menu"
 
-const navLinks = [
+const Routes = [
   { text: "Home", path: "/" },
   { text: "Blog", path: "/blog" },
   { text: "Project", path: "/project" },
@@ -62,7 +62,7 @@ export default function Header() {
 
   const NavList = () => (
     <div>
-      {navLinks.map((el, idx) => (
+      {Routes.map((el, idx) => (
         <Link key={idx} to={el.path}>
           <Button variant="contained" color="primary" disableElevation>
             {el.text}
@@ -73,17 +73,10 @@ export default function Header() {
   )
 
   const NavListDrawer = () => (
-    <div
-      className={classes.list}
-      role="presentation"
-      onClick={toggleDrawer(false)}
-      onKeyDown={toggleDrawer(false)}
-    >
-      {navLinks.map((el, idx) => (
-        <ListItem>
-          <Link key={idx} to={el.path} component="button" underline="none">
-            <ListItemText primary={el.text} />
-          </Link>
+    <div className={classes.list}>
+      {Routes.map((el, idx) => (
+        <ListItem button component={Link} to={el.path}>
+          <ListItemText primary={el.text} />
         </ListItem>
       ))}
     </div>
