@@ -73,9 +73,14 @@ export default function Header() {
   )
 
   const NavListDrawer = () => (
-    <div className={classes.list}>
+    <div
+      className={classes.list}
+      role="presentation"
+      onClick={toggleDrawer(false)}
+      onKeyDown={toggleDrawer(false)}
+    >
       {Routes.map((el, idx) => (
-        <ListItem button component={Link} to={el.path}>
+        <ListItem key={idx} button component={Link} to={el.path}>
           <ListItemText primary={el.text} />
         </ListItem>
       ))}
