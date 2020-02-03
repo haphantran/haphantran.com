@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-
+import Typography from "@material-ui/core/Typography"
+import MuiLink from "@material-ui/core/Link"
 import footerStyles from "./footer.module.scss"
 
 const Footer = () => {
@@ -14,13 +15,16 @@ const Footer = () => {
     }
   `)
 
-  const d = new Date()
-  const year = d.getFullYear()
   return (
     <footer className={footerStyles.footer}>
-      <p>
-        Created by {data.site.siteMetadata.author}, © {year}
-      </p>
+      <Typography variant="body2" color="textSecondary" align="center">
+        {"Copyright © "}
+        <MuiLink color="inherit" href="https://haphantran.com/">
+          Ha Phan Tran
+        </MuiLink>{" "}
+        {new Date().getFullYear()}
+        {"."}
+      </Typography>
     </footer>
   )
 }

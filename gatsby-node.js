@@ -4,6 +4,8 @@ module.exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const blogTemplate = path.resolve("./src/templates/blog.js")
   const projectTemplate = path.resolve("./src/templates/project.js")
+  const tutorialTemplate = path.resolve("./src/templates/tutorial.js")
+
   const res = await graphql(`
     query {
       allContentfulBlogPost {
@@ -14,6 +16,14 @@ module.exports.createPages = async ({ graphql, actions }) => {
         }
       }
       allContentfulProject {
+        edges {
+          node {
+            slug
+          }
+        }
+      }
+
+      allContentfulTutorial {
         edges {
           node {
             slug
@@ -37,6 +47,16 @@ module.exports.createPages = async ({ graphql, actions }) => {
     createPage({
       component: projectTemplate,
       path: `/project/${edge.node.slug}`,
+      context: {
+        slug: edge.node.slug,
+      },
+    })
+  })
+
+  res.data.allContentfulTutorial.edges.forEach(edge => {
+    createPage({
+      component: tutorialTemplate,
+      path: `/tutorial/${edge.node.slug}`,
       context: {
         slug: edge.node.slug,
       },

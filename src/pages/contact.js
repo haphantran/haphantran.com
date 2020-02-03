@@ -2,6 +2,7 @@ import React from "react"
 
 import Layout from "../components/layout"
 import Head from "../components/head"
+import MuiLink from "@material-ui/core/Link"
 
 const ContactPage = () => {
   return (
@@ -10,13 +11,9 @@ const ContactPage = () => {
       <h1>Contact</h1>
       <p>
         The best way to reach me is via{" "}
-        <a
-          href="https://twitter.com/@haphantran"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <MuiLink color="primary" href="https://twitter.com/haphantran">
           @haphantran
-        </a>{" "}
+        </MuiLink>{" "}
         on Twitter!
       </p>
     </Layout>

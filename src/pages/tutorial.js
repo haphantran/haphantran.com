@@ -5,10 +5,10 @@ import Layout from "../components/layout"
 import ProjectStyle from "./project.module.scss"
 import Head from "../components/head"
 
-const ProjectPage = () => {
+const TutorialPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulProject(sort: { fields: publishedDate, order: DESC }) {
+      allContentfulTutorial(sort: { fields: publishedDate, order: DESC }) {
         edges {
           node {
             title
@@ -25,13 +25,13 @@ const ProjectPage = () => {
 
   return (
     <Layout>
-      <Head title="Projects" />
-      <h1>Projects</h1>
+      <Head title="Tutorial" />
+      <h1>Tutorials</h1>
       <ol className={ProjectStyle.posts}>
-        {data.allContentfulProject.edges.map((edge, idx) => {
+        {data.allContentfulTutorial.edges.map((edge, idx) => {
           return (
             <li key={idx} className={ProjectStyle.post}>
-              <Link to={`/project/${edge.node.slug}`}>
+              <Link to={`/tutorial/${edge.node.slug}`}>
                 <h2>{edge.node.title}</h2>
                 <p> {edge.node.description.description} </p>
                 <p>{edge.node.publishedDate}</p>
@@ -44,4 +44,4 @@ const ProjectPage = () => {
   )
 }
 
-export default ProjectPage
+export default TutorialPage
