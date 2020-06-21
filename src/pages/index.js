@@ -12,6 +12,7 @@ export default () => {
     <Navbar />
     <Hero />
     <Services />
+    <Jobs />
   </Layout>
 }
 // ...GatsbyImageSharpFluid
