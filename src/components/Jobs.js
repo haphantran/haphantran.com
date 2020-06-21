@@ -9,10 +9,10 @@ const query = graphql`
     allStrapiJobs(sort: {fields: strapiId, order: DESC}) {
       nodes {
         company
-        daterange
+        date
         position
         desc {
-          duty
+          name
           id
         }
       }
@@ -56,7 +56,7 @@ const Jobs = () => {
             return (
               <div key={item.id} className="job-desc">
                 <FaAngleDoubleRight className="job-icon"></FaAngleDoubleRight>
-                <p>{item.duty}</p>
+                <p>{item.name}</p>
               </div>
             )
           })}
