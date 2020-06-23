@@ -465,6 +465,7 @@ Hero
     display: block;
     grid-row: 1/1;
     grid-column: 6/-1;
+    margin-left: 2em;
   }
 }
 @media screen and (min-width: 1170px) {
@@ -1006,9 +1007,14 @@ Blog Template
 
 .blog-template h1 {
   text-transform: none;
+  font-size: 2em;
 },
 .blog-template h2 {
   text-align: center;
+  font-size: 1.5em;
+}
+.blog-template h3{
+  font-size: 1em;
 }
 .blog-template ul {
   margin-top: 2rem;
