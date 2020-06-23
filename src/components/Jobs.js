@@ -10,6 +10,7 @@ const query = graphql`
       nodes {
         company
         date
+        strapiId
         position
         desc {
           name
@@ -27,7 +28,7 @@ const Jobs = () => {
     allStrapiJobs: { nodes: jobs },
   } = data
   const [value, setValue] = React.useState(0)
-  const { company, position, date, desc } = jobs[value]
+  const { company, position, date, desc,strapiId} = jobs[value]
 
   return (
     <section className="section jobs">
