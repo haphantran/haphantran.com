@@ -6,15 +6,10 @@ import SEO from "../components/SEO"
 const Success = () => {
   return (
     <Layout>
-    <SEO title="Thank you"/>
-      <main className="success-page">
-    <div className="success-container">
-      <h1>Thank you for your message. I will reply soon.</h1>
-      <Link to="/" className='btn'>back home</Link>
-    </div>
-  </main></Layout>
-    
-    )
+      <SEO title="Thank you" />
+      <h1>Thank you for contacting me.</h1>
+    </Layout>
+  )
 }
 
 export default Success
