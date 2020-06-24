@@ -12,7 +12,7 @@ const Blog = ({
 }) => {
   return (
     <Layout>
-      <SEO title="About" description="About Ha Phan Tran" />
+      <SEO title="Blogs" description="Ha Phan Tran blog posts" />
       <section className="blog-page">
         <Blogs blogs={blogs} title="Blog posts" />
       </section>
