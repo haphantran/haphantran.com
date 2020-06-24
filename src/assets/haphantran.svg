@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="653" height="107" viewBox="0 0 653 107">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        font-size: 104.167px;
+        font-family: "Myriad Pro";
+      }
+
+      .cls-1 {
+        fill: #102a42;
+      }
+
+      .cls-2 {
+        fill: #2caeba;
+      }
+    </style>
+  </defs>
+  <g id="Artboard_1" data-name="Artboard 1">
+    <text id="Ha_Phan" data-name="Ha Phan" class="cls-1" x="39" y="89">Ha Phan</text>
+    <text id="Tran" class="cls-2" x="428" y="86">Tran</text>
+  </g>
+</svg>
