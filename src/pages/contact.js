@@ -6,7 +6,7 @@ const contact = () => {
     <section className="contact-page">
       <article className="contact-form">
         <h3>get in touch</h3>
-        <form name="contact" method="POST" data-netlify="true">
+        <form name="contact" method="POST" data-netlify="true" action="/success">
           <div className="form-group">
             <input name="name" type="text" placeholder="name" className="form-control" /> 
             <input name="email" type="email" placeholder="email" className="form-control" /> 
