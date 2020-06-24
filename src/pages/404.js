@@ -5,14 +5,18 @@ import SEO from "../components/SEO"
 
 const Error = () => {
   return (
-    <Layout><main className="error-page">
-    <div className="error-container">
-      <h1>Opps this page is not exist</h1>
-      <Link to="/" className='btn'>back home</Link>
-    </div>
-  </main></Layout>
-    
-    )
+    <Layout>
+      <SEO title="Error" description="Error Page - Ha Phan Tran website" />
+      <main className="error-page">
+        <div className="error-container">
+          <h1>Opps this page is not exist</h1>
+          <Link to="/" className="btn">
+            back home
+          </Link>
+        </div>
+      </main>
+    </Layout>
+  )
 }
 
 export default Error

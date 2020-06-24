@@ -5,7 +5,9 @@ import SEO from "../components/SEO"
 
 const Success = () => {
   return (
-    <Layout><main className="error-page">
+    <Layout>
+    <SEO title="Thank you"/>
+      <main className="error-page">
     <div className="error-container">
       <h1>Thank you for your message. I will reply soon.</h1>
       <Link to="/" className='btn'>back home</Link>

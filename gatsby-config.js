@@ -7,11 +7,11 @@
 module.exports = {
   siteMetadata: {
     title: "Ha Phan Tran Portfolio",
-    description: "This is Ha Phan Tan Portfolio Site",
+    description: "This is Ha Phan Tran Website",
     author: "@webdev",
     twitterUsername: "@haphantran",
     image: "/twitter-img.png",
-    siteUrl: "https://testing-strapi-gatsby-build.netlify.app",
+    siteUrl: "https://haphantran.com",
   },
   plugins: [
     `gatsby-transformer-sharp`,

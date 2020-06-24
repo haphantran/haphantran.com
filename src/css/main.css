@@ -87,13 +87,13 @@ h4 {
   font-family: var(--ff-primary);
 }
 h1 {
-  font-size: 3rem;
-}
-h2 {
   font-size: 2rem;
 }
+h2 {
+  font-size: 1.7rem;
+}
 h3 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 h4 {
   font-size: 0.875rem;
@@ -104,16 +104,16 @@ p {
 }
 @media screen and (min-width: 800px) {
   h1 {
-    font-size: 4rem;
+    font-size: 2rem;
   }
   h2 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
   h3 {
-    font-size: 1.75rem;
+    font-size: 1.2rem;
   }
   h4 {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   body {
     font-size: 1rem;
@@ -465,7 +465,6 @@ Hero
     display: block;
     grid-row: 1/1;
     grid-column: 6/-1;
-    margin-left: 2em;
   }
 }
 @media screen and (min-width: 1170px) {
@@ -861,6 +860,7 @@ Pages
 .projects-page,
 .blog-page,
 .error-page,
+.success-page,
 .about-page,
 .contact-page {
   background: var(--clr-grey-10);
@@ -873,6 +873,18 @@ Pages
   text-align: center;
 }
 .error-page h1 {
+  text-transform: uppercase;
+  color: var(--clr-primary-1);
+  margin-bottom: 2rem;
+}
+
+.success-page {
+  display: grid;
+  place-items: center;
+  background: var(--clr-primary-10);
+  text-align: center;
+}
+.success-page h1 {
   text-transform: uppercase;
   color: var(--clr-primary-1);
   margin-bottom: 2rem;
@@ -1007,14 +1019,14 @@ Blog Template
 
 .blog-template h1 {
   text-transform: none;
-  font-size: 2em;
+
 },
 .blog-template h2 {
   text-align: center;
-  font-size: 1.5em;
+
 }
 .blog-template h3{
-  font-size: 1em;
+
 }
 .blog-template ul {
   margin-top: 2rem;
