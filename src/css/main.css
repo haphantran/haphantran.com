@@ -1003,6 +1003,12 @@ Contact Page
   border-radius: var(--radius);
   letter-spacing: var(--spacing);
 }
+.form-control-text-area::placeholder{
+  font-family: var(--ff-primary);
+  color: var(--clr-grey-1);
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+}
 .form-control::placeholder {
   font-family: var(--ff-primary);
   color: var(--clr-grey-1);
