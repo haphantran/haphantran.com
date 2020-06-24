@@ -7,7 +7,15 @@ const Success = () => {
   return (
     <Layout>
       <SEO title="Thank you" />
-      <h1>Thank you for contacting me.</h1>
+      
+      <main className="success-page">
+        <div className="success-container">
+          <h1>Thank you for contacting me</h1>
+          <Link to="/" className="btn">
+            back home
+          </Link>
+        </div>
+      </main>
     </Layout>
   )
 }
