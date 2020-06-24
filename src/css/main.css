@@ -1001,7 +1001,6 @@ Contact Page
   margin-bottom: 1.25rem;
   background: var(--clr-grey-10);
   border-radius: var(--radius);
- 
   letter-spacing: var(--spacing);
 }
 .form-control::placeholder {
