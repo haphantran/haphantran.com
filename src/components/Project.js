@@ -1,8 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Image from "gatsby-image"
-import { Link } from "gatsby"
-import { FaGithubSquare, FaShareSquare, FaGit } from "react-icons/fa"
+
+import { FaGithubSquare, FaShareSquare } from "react-icons/fa"
 const Project = ( {description, title, github, stack, url, image,index}) => {
   return <article className="project" >
     <Image fluid={image.childImageSharp.fluid} className="project-img"/>
@@ -20,12 +20,12 @@ const Project = ( {description, title, github, stack, url, image,index}) => {
 </div>
 
 <div className="project-links">
-  { github &&  <Link to={github}>
+  { github &&  <a href={github} target="_blank" rel="noopener noreferrer">
     <FaGithubSquare className="project-icon"/>
-  </Link>}
-  <Link to={url}>
+  </a>}
+  <a href={url} target="_blank" rel="noopener noreferrer">
     <FaShareSquare className="project-icon"/>
-  </Link>
+  </a>
   </div>
 
 </div>
