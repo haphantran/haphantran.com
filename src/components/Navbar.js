@@ -1,5 +1,5 @@
 import React from "react"
-import logo from "../assets/mylogo.svg"
+import logo from "../assets/logo.svg"
 import { FaAlignRight } from "react-icons/fa"
 import PageLinks from "../constants/links"
 
