@@ -22,7 +22,7 @@ const Blog = ({
 
 export const query = graphql`
   {
-    allStrapiBlogs {
+    allStrapiBlogs(sort: {fields: date, order: DESC}) {
       nodes {
         slug
         desc
