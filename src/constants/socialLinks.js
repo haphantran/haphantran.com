@@ -35,11 +35,11 @@ const data = [
     icon: <FaStrava className="social-icon"></FaStrava>,
     url: "https://www.strava.com/athletes/7661487",
   },
-  {
-    id: 6,
-    icon: <FaTwitter className="social-icon"></FaTwitter >,
-    url: "https://www.twitter.com/haphantran",
-  },
+  // {
+  //   id: 6,
+  //   icon: <FaTwitter className="social-icon"></FaTwitter >,
+  //   url: "https://www.twitter.com/haphantran",
+  // },
 ]
 const links = data.map(link => {
   return (
