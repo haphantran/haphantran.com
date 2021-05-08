@@ -86,5 +86,5 @@ Seo.defaultProps = {
   title: null,
   description: null,
   image: null,
-  article: false,
+  article: false, 
 }
