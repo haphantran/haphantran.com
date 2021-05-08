@@ -6,21 +6,19 @@ import { Link } from "gatsby"
 
 const query = graphql`
   {
-    allStrapiJobs(sort: {fields: strapiId, order: DESC}) {
+    allStrapiJobs (sort: { fields: createdAt, order: DESC }) {
       nodes {
         company
         date
-        strapiId
-        position
         desc {
-          name
           id
+          name
         }
+        position
       }
     }
   }
 `
-
 
 const Jobs = () => {
   const data = useStaticQuery(query)
@@ -28,20 +26,19 @@ const Jobs = () => {
     allStrapiJobs: { nodes: jobs },
   } = data
   const [value, setValue] = React.useState(0)
-  const { company, position, date, desc,strapiId} = jobs[value]
-
+  const { company, position, date, desc } = jobs[value]
   return (
     <section className="section jobs">
-      <Title title="expierence" />
+      <Title title="experience" />
       <div className="jobs-center">
         {/* btn container */}
         <div className="btn-container">
           {jobs.map((item, index) => {
             return (
               <button
-                key={item.strapiId}
+                key={index}
+                className={index === value ? "job-btn active-btn" : "job-btn"}
                 onClick={() => setValue(index)}
-                className={`job-btn ${index === value && "active-btn"}`}
               >
                 {item.company}
               </button>

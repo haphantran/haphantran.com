@@ -1,22 +1,21 @@
 import React from "react"
-import Layout from "../components/Layout"
 import { graphql } from "gatsby"
 import Blogs from "../components/Blogs"
-import SEO from '../components/SEO'
+import Seo from '../components/Seo'
 
 
-const Blog = ({
+const BlogPage = ({
   data: {
     allStrapiBlogs: { nodes: blogs },
   },
 }) => {
   return (
-    <Layout>
-      <SEO title="Blogs" description="Ha Phan Tran blog posts" />
+    <>
+      <Seo title="Blogs" description="Ha Phan Tran blog posts" />
       <section className="blog-page">
         <Blogs blogs={blogs} title="Blog posts" />
       </section>
-    </Layout>
+    </>
   )
 }
 
@@ -32,9 +31,7 @@ export const query = graphql`
         category
         image {
           childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
           }
         }
       }
@@ -42,4 +39,4 @@ export const query = graphql`
   }
 `
 
-export default Blog
+export default BlogPage

@@ -1,10 +1,10 @@
 import React from "react"
-import Layout from "../components/Layout"
-import SEO from '../components/SEO'
+import Seo from '../components/Seo'
 
 const contact = () => {
-  return <Layout>
-  <SEO title="Contact" description="Ha Phan Tran Contact page"/>
+  return (
+    <>
+    <Seo title="Contact" description="Ha Phan Tran Contact page"/>
     <section className="contact-page">
       <article className="contact-form">
         <h3>get in touch</h3>
@@ -19,8 +19,9 @@ const contact = () => {
           </div>  
           <button type="submit" className="submit-btn btn">send me an email here </button>
         </form>
-      </article></section>
-  </Layout>
+        </article></section>
+       </>
+ )
 }
 
 export default contact

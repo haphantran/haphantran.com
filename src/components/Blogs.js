@@ -2,19 +2,22 @@ import React from "react"
 import Title from "./Title"
 import Blog from "./Blog"
 import { Link } from "gatsby"
-export const Blogs = ( {blogs, title, showLink}) => {
-  return <section className="section">
-   <Title title={title}/>
-   <div className="section-center blogs-center">
-        {blogs.map( blog => {
-          return <Blog key={blog.id} {...blog}/>
+const Blogs = ({ blogs, title, showLink }) => {
+  return (
+    <section className="section">
+      <Title title={title} />
+      <div className="section-center blogs-center">
+        {blogs.map((blog, index) => {
+          return <Blog key={blog.id} index={index} {...blog} />
         })}
       </div>
       {showLink && (
-        <Link to="/blog" className="btn center-btn">
-          all blog posts
+        <Link to="/blogs" className="btn center-btn">
+          View all blog posts
         </Link>
       )}
-  </section>
+    </section>
+  )
 }
+
 export default Blogs

@@ -1,4 +1,4 @@
-/*
+ /*
 =============== 
 Fonts
 ===============
@@ -263,7 +263,7 @@ Navbar
     font-weight: bold;
     letter-spacing: var(--spacing);
     transition: var(--transition);
-    padding: 0.5rem 0;
+    padding: 0.5rem 0.5rem;
   }
   .nav-links a:hover {
     color: var(--clr-primary-5);
@@ -669,9 +669,12 @@ Projects
   margin-bottom: 0.75rem;
 }
 .project-info h3 {
-  font-weight: 500;
-  margin-bottom: 1.5rem;
-  font-size: 1.5rem;
+    font-weight: 500;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    color: var(--clr-grey-1);
+    transition: var(--transition);
 }
 .project-desc {
   word-spacing: 15px;
@@ -1084,4 +1087,4 @@ Blog Template
   .blog-template img {
     width: 90%;
   }
-}
+} 

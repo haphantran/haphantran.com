@@ -1,31 +1,14 @@
 import React from "react"
-import Image from "gatsby-image"
 import { Link } from "gatsby"
-import { graphql, useStaticQuery } from "gatsby"
-import SocialLinks from "../constants/socialLinks"
+import socialLinks from "../constants/socialLinks"
+// import heroImg from "../assets/images/hero.svg"
 
-const query = graphql`
-  {
-    file(relativePath: { eq: "hero-img.png" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`
 
+import { StaticImage } from "gatsby-plugin-image"
 const Hero = () => {
-  const {
-    file: {
-      childImageSharp: { fluid },
-    },
-  } = useStaticQuery(query)
-
   return (
     <header className="hero">
-      <div className="section-center hero-center">
+      <section className="section-center hero-center">
         <article className="hero-info">
           <div>
             <div className="underline"></div>
@@ -33,18 +16,30 @@ const Hero = () => {
             <h2>Business Intelligence Developer</h2>
             <br />
             <h4>Microsoft Certified Solutions Expert</h4>
-            <h4>Azure Data Scientist Associate</h4>
+            <h4>Azure Data Scientist Associate (Python, Spark)</h4>
             <h4>SAS Certified Professional: Advanced Programming</h4>
-            <h4>Tableau and Alteryx Certified Specialist</h4>
+            <h4>PowerBI, Tableau and Alteryx Certified Specialist</h4>
             <Link to="/contact" className="btn">
-              {" "}
               contact me
             </Link>
-            <SocialLinks></SocialLinks>
+            <div className="social-links">
+              {socialLinks.map(link => {
+                return (
+                  <a href={link.url} key={link.id} className="social-link">
+                    {link.icon}
+                  </a>
+                )
+              })}
+            </div>
           </div>
         </article>
-        <Image fluid={fluid} className="hero-img"></Image>
-      </div>{" "}
+        <StaticImage
+          src="../assets/images/hero.png"
+          alt="HaPhan's headshot"
+          className="hero-img"
+        />
+        {/* <img src={heroImg} alt="portfolio" className="hero-img-svg" /> */}
+      </section>
     </header>
   )
 }

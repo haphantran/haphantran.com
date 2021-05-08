@@ -1,12 +1,11 @@
 import React from "react"
-import Layout from "../components/Layout"
 import { Link } from "gatsby"
-import SEO from "../components/SEO"
+import Seo from "../components/Seo"
 
 const Error = () => {
   return (
-    <Layout>
-      <SEO title="Error" description="Error Page - Ha Phan Tran website" />
+    <>
+      <Seo title="Error" description="Error Page - Ha Phan Tran website" />
       <main className="error-page">
         <div className="error-container">
           <h1>Opps this page is not exist</h1>
@@ -15,7 +14,7 @@ const Error = () => {
           </Link>
         </div>
       </main>
-    </Layout>
+    </>
   )
 }
 

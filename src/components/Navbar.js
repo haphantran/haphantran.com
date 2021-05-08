@@ -1,8 +1,7 @@
 import React from "react"
-import logo from "../assets/logo.svg"
+import logo from "../assets/images/logo.svg"
 import { FaAlignRight } from "react-icons/fa"
 import PageLinks from "../constants/links"
-
 import { Link } from "gatsby"
 
 const Navbar = ({toggleSidebar}) => {
@@ -15,7 +14,15 @@ const Navbar = ({toggleSidebar}) => {
             <FaAlignRight />
           </button>
         </div>
-        <PageLinks styleClass="nav-links" />
+         <div className="nav-links">
+          {PageLinks.map(link => {
+            return (
+              <Link key={link.id} to={link.url}>
+                 {link.text}
+              </Link>
+            )
+          })}
+        </div>
       </div>
     </nav>
   )

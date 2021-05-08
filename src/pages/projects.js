@@ -1,21 +1,22 @@
 import React from "react"
-import Layout from "../components/Layout"
 import { graphql } from "gatsby"
 import Projects from "../components/Projects"
-import SEO from "../components/SEO"
+import Seo from "../components/Seo"
 
 const ProjectsPage = ({
   data: {
-    allStrapiProjects: { nodes: projects },
+    allStrapiProjects : { nodes: projects },
   },
 }) => {
   return (
-    <Layout>
-      <SEO title="Projects" description="About Ha Phan Tran" />
-      <section className="project-pages">
-        <Projects projects={projects} title="all projects" />
-      </section>
-    </Layout>
+    <>
+      <Seo title="Projects" />
+      <main>
+        <section className="projects-page">
+          <Projects title="all projects" projects={projects} />
+        </section>
+      </main>
+    </>
   )
 }
 
@@ -23,23 +24,23 @@ export const query = graphql`
   {
     allStrapiProjects {
       nodes {
+        description
+        featured
         github
         id
-        description
         title
         url
-        image {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
         stack {
           id
           title
         }
+        image {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
+          }
+        }
       }
+      totalCount
     }
   }
 `

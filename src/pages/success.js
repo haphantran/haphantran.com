@@ -1,12 +1,12 @@
 import React from "react"
 import Layout from "../components/Layout"
 import { Link } from "gatsby"
-import SEO from "../components/SEO"
+import Seo from "../components/Seo"
 
 const Success = () => {
   return (
     <Layout>
-      <SEO title="Thank you" />
+      <Seo title="Thank you" />
       
       <main className="success-page">
         <div className="success-container">

@@ -1,14 +1,25 @@
 import React from "react"
-import SocialLinks from "../constants/socialLinks"
+import socialLinks from "../constants/socialLinks"
 const Footer = () => {
-  return <footer className="footer">
-  <div>
-      <SocialLinks styleClass="footer-links"/>
-      <h4>copyright&copy;{new Date().getFullYear()}
-      <span> Ha-Phan Tran</span> all rights reserved
-      </h4>
-    </div>
-  </footer>
+  return (
+    <footer className="footer">
+      <div>
+        <div className="footer-links social-links">
+          {socialLinks.map(link => {
+            return (
+              <a href={link.url} key={link.id} className="social-link">
+                {link.icon}
+              </a>
+            )
+          })}
+        </div>
+        <h4>
+          copyright&copy;{new Date().getFullYear()}
+          <span>WebDev</span> all rights reserved
+        </h4>
+      </div>
+    </footer>
+  )
 }
 
 export default Footer
