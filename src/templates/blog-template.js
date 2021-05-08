@@ -13,7 +13,7 @@ const BlogTemplate = ({ data }) => {
         <div className="section-center">
           <article className="blog-content">
               <h2>{title}</h2>
-            <p>{desc}</p>
+            <h3>{desc}</h3>
 
             <Markdown children={content}  />
           </article>
