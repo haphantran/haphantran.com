@@ -6,6 +6,7 @@ import {
   FaLinkedin,
   FaStrava
 } from "react-icons/fa"
+import { SiTiktok } from "react-icons"
 
 const data = [
   {
@@ -16,7 +17,7 @@ const data = [
   {
     id: 2,
     icon: <FaYoutube className="social-icon" />,
-    url: "https://www.youtube.com/channel/UC3qTWblpx2XhPDI8gwGnZ-A",
+    url: "https://www.youtube.com/c/HaPhanTran",
   },
   {
     id: 3,
@@ -34,11 +35,22 @@ const data = [
     icon: <FaStrava className="social-icon"></FaStrava>,
     url: "https://www.strava.com/athletes/7661487",
   },
-  // {
-  //   id: 6,
-  //   icon: <FaTwitter className="social-icon"></FaTwitter >,
-  //   url: "https://www.twitter.com/haphantran",
-  // },
+  {
+    id: 6,
+    icon: <FaInstagram className="social-icon"></FaInstagram >,
+    url: "https://www.instagram.com/haphantran/",    
+  },
+  {
+    id: 6,
+    icon: <FaInstagram className="social-icon"></FaInstagram >,
+    url: "https://www.instagram.com/haphantran/",    
+  },
+   {
+    id: 7,
+    icon: <SiTiktok className="social-icon"></SiTiktok >,
+    url:  "https://www.tiktok.com/@haphantran.com",    
+  },
+ 
 ]
 
 export default data
